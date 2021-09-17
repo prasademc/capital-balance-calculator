@@ -11,20 +11,41 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-registerLocaleData(en);
+/**
+ * Import shared modules
+ */
+import { NGZorroAntdModule } from './modules/antd.module';
 
+/**
+ * Import components
+ */
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { CbCalculatorComponent } from './components/cb-calculator/cb-calculator.component';
+import { PersonalDetailComponent } from './components/personal-detail/personal-detail.component';
+import { StartBalanceProjectorComponent } from './components/start-balance-projector/start-balance-projector.component';
+import { ProjectionDataComponent } from './components/projection-data/projection-data.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+registerLocaleData(en);
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule
-  ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		MainLayoutComponent,
+		CbCalculatorComponent,
+		PersonalDetailComponent,
+		StartBalanceProjectorComponent,
+		ProjectionDataComponent,
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormsModule,
+		HttpClientModule,
+		BrowserAnimationsModule,
+		NGZorroAntdModule,
+		ReactiveFormsModule,
+	],
+	providers: [{ provide: NZ_I18N, useValue: en_US }],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

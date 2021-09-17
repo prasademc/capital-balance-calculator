@@ -1,0 +1,17 @@
+nz-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 4rem;
+
+	.title {
+		color: #ffffff;
+		margin: 0;
+	}
+}
+
+nz-content {
+	padding: 2rem 4rem;
+	min-height: calc(100vh - 4rem);
+}

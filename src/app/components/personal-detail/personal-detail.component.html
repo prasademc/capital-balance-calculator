@@ -1,0 +1,106 @@
+<nz-card class="personal-data-input" nzTitle="Personal Data Inputs">
+	<form nz-form [formGroup]="personalDetailForm" [nzLayout]="'vertical'">
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="salary">Salary($)</nz-form-label>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="salary"
+					type="number"
+					id="salary"
+					formControlName="salary"
+				/>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="contributionRate"
+				>Contribution Rate(%)</nz-form-label
+			>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="contributionRate"
+					type="number"
+					id="contributionRate"
+					formControlName="contributionRate"
+				/>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="inflationRate"
+				>Inflation Rate(%)</nz-form-label
+			>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="inflationRate"
+					type="number"
+					id="inflationRate"
+					formControlName="inflationRate"
+				/>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="earnings">Earnings(%)</nz-form-label>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="earnings"
+					type="number"
+					id="earnings"
+					formControlName="earnings"
+				/>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="fees">Fees(%)</nz-form-label>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="fees"
+					type="number"
+					id="fees"
+					formControlName="fees"
+				/>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="tax">Tax(%)</nz-form-label>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="tax"
+					type="text"
+					id="tax"
+					formControlName="tax"
+				/>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="withdrawalRate"
+				>Withdrawal Rate(%)</nz-form-label
+			>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="withdrawalRate"
+					type="text"
+					id="withdrawalRate"
+					formControlName="withdrawalRate"
+				/>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="withdrawalRate"
+				>Withdrawals begin & Contributions stop year</nz-form-label
+			>
+			<nz-form-control [nzSpan]="null">
+				<nz-select name="wcYear" id="withdrawalRate" nzShowSearch nzAllowClear nzPlaceHolder="Select a year" formControlName="wcYear">
+					<nz-option nzLabel="2020" nzValue="2020"></nz-option>
+					<nz-option nzLabel="2021" nzValue="2021"></nz-option>
+					<nz-option nzLabel="2022" nzValue="2022"></nz-option>
+				</nz-select>
+			</nz-form-control>
+		</nz-form-item>
+	</form>
+</nz-card>
