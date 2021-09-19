@@ -36,6 +36,7 @@ export class ProjectionDataComponent implements OnChanges {
 		this.endBalances = this.capitalBalanceData.map((data) => data.endBalance);
 
 		if(this.age > 0) {
+			this.ages = [];
 			for (let a = 0; a < this.years.length; a++) {
 				this.ages.push(this.age);
 				++this.age;
