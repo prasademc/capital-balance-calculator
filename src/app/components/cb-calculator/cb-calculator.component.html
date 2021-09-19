@@ -3,7 +3,7 @@
 		<app-personal-detail></app-personal-detail>
 	</div>
 	<div nz-col [nzSpan]="17" [nzPush]="1">
-		<app-start-balance-projector></app-start-balance-projector>
-		<app-projection-data></app-projection-data>
+		<app-start-balance-projector [chartsData]="chartsData"></app-start-balance-projector>
+		<app-projection-data [capitalBalanceData]="displayPersonalData" [age]="age"></app-projection-data>
 	</div>
 </div>

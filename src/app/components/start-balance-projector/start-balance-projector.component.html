@@ -1,3 +1,14 @@
 <nz-card class="personal-data-input" nzTitle="Start Balance Projection">
-
+	<canvas
+		baseChart
+		width="500"
+		height="200"
+		[datasets]="lineChartData"
+		[labels]="lineChartLabels"
+		[options]="lineChartOptions"
+		[legend]="lineChartLegend"
+		[chartType]="lineChartType"
+		[plugins]="lineChartPlugins"
+	>
+	</canvas>
 </nz-card>

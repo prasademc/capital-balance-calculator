@@ -12,6 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /**
+ * Import shared services
+ */
+import { PersonalDataStatusService } from './services/personal-data-status.service';
+
+/**
  * Import shared modules
  */
 import { NGZorroAntdModule } from './modules/antd.module';
@@ -25,6 +30,7 @@ import { PersonalDetailComponent } from './components/personal-detail/personal-d
 import { StartBalanceProjectorComponent } from './components/start-balance-projector/start-balance-projector.component';
 import { ProjectionDataComponent } from './components/projection-data/projection-data.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 registerLocaleData(en);
 @NgModule({
@@ -44,8 +50,12 @@ registerLocaleData(en);
 		BrowserAnimationsModule,
 		NGZorroAntdModule,
 		ReactiveFormsModule,
+		ChartsModule,
 	],
-	providers: [{ provide: NZ_I18N, useValue: en_US }],
+	providers: [
+		{ provide: NZ_I18N, useValue: en_US },
+		PersonalDataStatusService,
+	],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

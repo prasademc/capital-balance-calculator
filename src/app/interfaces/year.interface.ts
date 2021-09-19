@@ -1,8 +1,9 @@
 export interface Years {
-	year: Year[];
+	years: Year[];
 }
 
 export interface Year {
-	label: number;
-	name: number;
+	startBalance: string;
+	label: string;
+	value: number;
 }

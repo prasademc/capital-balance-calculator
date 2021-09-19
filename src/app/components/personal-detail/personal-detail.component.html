@@ -1,7 +1,9 @@
 <nz-card class="personal-data-input" nzTitle="Personal Data Inputs">
 	<form nz-form [formGroup]="personalDetailForm" [nzLayout]="'vertical'">
 		<nz-form-item>
-			<nz-form-label [nzSpan]="null" nzFor="salary">Salary($)</nz-form-label>
+			<nz-form-label [nzSpan]="null" nzFor="salary"
+				>Salary($)</nz-form-label
+			>
 			<nz-form-control [nzSpan]="null">
 				<input
 					nz-input
@@ -41,7 +43,9 @@
 			</nz-form-control>
 		</nz-form-item>
 		<nz-form-item>
-			<nz-form-label [nzSpan]="null" nzFor="earnings">Earnings(%)</nz-form-label>
+			<nz-form-label [nzSpan]="null" nzFor="earnings"
+				>Earnings(%)</nz-form-label
+			>
 			<nz-form-control [nzSpan]="null">
 				<input
 					nz-input
@@ -91,15 +95,38 @@
 			</nz-form-control>
 		</nz-form-item>
 		<nz-form-item>
-			<nz-form-label [nzSpan]="null" nzFor="withdrawalRate"
-				>Withdrawals begin & Contributions stop year</nz-form-label
+			<nz-form-label [nzSpan]="null" nzFor="wcYear"
+				>Year of withdrawals begin & contributions stop</nz-form-label
 			>
 			<nz-form-control [nzSpan]="null">
-				<nz-select name="wcYear" id="withdrawalRate" nzShowSearch nzAllowClear nzPlaceHolder="Select a year" formControlName="wcYear">
-					<nz-option nzLabel="2020" nzValue="2020"></nz-option>
-					<nz-option nzLabel="2021" nzValue="2021"></nz-option>
-					<nz-option nzLabel="2022" nzValue="2022"></nz-option>
+				<nz-select
+					name="wcYear"
+					id="wcYear"
+					nzShowSearch
+					nzAllowClear
+					nzPlaceHolder="Select a year"
+					formControlName="wcYear"
+				>
+					<nz-option
+						*ngFor="let year of years"
+						nzLabel="{{ year.label }}"
+						nzValue="{{ year.value }}"
+					></nz-option>
 				</nz-select>
+			</nz-form-control>
+		</nz-form-item>
+		<nz-form-item>
+			<nz-form-label [nzSpan]="null" nzFor="age"
+				>Age(year)</nz-form-label
+			>
+			<nz-form-control [nzSpan]="null">
+				<input
+					nz-input
+					name="age"
+					type="text"
+					id="age"
+					formControlName="age"
+				/>
 			</nz-form-control>
 		</nz-form-item>
 	</form>

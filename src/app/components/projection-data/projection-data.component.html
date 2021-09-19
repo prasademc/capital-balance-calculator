@@ -1,3 +1,54 @@
-<nz-card class="personal-data-input" nzTitle="Projection Details">
-
+<nz-card class="projection-detail" nzTitle="Projection Details">
+	<div class="projection-detail__table">
+		<nz-table nzTemplateMode>
+			<thead>
+				<tr>
+					<th nzLeft></th>
+					<th *ngFor="let year of years">{{ year.label }}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td nzLeft>Age</td>
+					<td *ngFor="let age of ages">{{ age }}</td>
+				</tr>
+				<tr>
+					<td nzLeft>Start Balance</td>
+					<td *ngFor="let sb of startBalance">{{ sb | currency }}</td>
+				</tr>
+				<tr>
+					<td nzLeft>Contributions</td>
+					<td *ngFor="let contribution of contributions">
+						{{ contribution | currency }}
+					</td>
+				</tr>
+				<tr>
+					<td nzLeft>Earnings</td>
+					<td *ngFor="let earning of earnings">
+						{{ earning | currency }}
+					</td>
+				</tr>
+				<tr>
+					<td nzLeft>Fees</td>
+					<td *ngFor="let fee of fees">{{ fee | currency }}</td>
+				</tr>
+				<tr>
+					<td>Tax</td>
+					<td *ngFor="let tax of taxes">{{ tax | currency }}</td>
+				</tr>
+				<tr>
+					<td nzLeft>Weithdrawals</td>
+					<td *ngFor="let weithdrawal of weithdrawals">
+						{{ weithdrawal | currency }}
+					</td>
+				</tr>
+				<tr>
+					<td nzLeft>End Balance</td>
+					<td *ngFor="let endBalance of endBalances">
+						{{ endBalance | currency }}
+					</td>
+				</tr>
+			</tbody>
+		</nz-table>
+	</div>
 </nz-card>
